@@ -1,0 +1,4 @@
+{'q1': {'pergunta': 'Vamos começar?', 'resposta': {'Sim': 'q2'}},
+'q2': {'pergunta': 'O que deseja fazer?', 'resposta': {'Consultar': 'q3'}},
+'q3': {'pergunta': 'Qual consulta deseja fazer?', 'resposta': {'Atendimento': 'q4', 'Protocol': 'q4'}},
+'q4': {'pergunta': 'Consultar por lista ou idê?', 'resposta': {'Lista': 'q5', 'ID': 'q6'}}}

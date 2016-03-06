@@ -1,0 +1,30 @@
+/* Header section */
+*{margin: 0px; padding: 0px;}
+body {width: 100%; margin: auto} 
+#title_portaldocidadao { background-color: #3880AA; float: left; font-family: Tahoma; font-size: 1.2vw; color: white; text-align: center; font-weight: bold}
+#burgermenu { text-align: center; vertical-align: middle; background-color: #3C8DBC; float: left}
+#burgerimg img {max-width: 50px}
+#otheroptions {width: auto; background-color: #3C8DBC; float: right}
+
+/* Colors */
+#yellow {clear: right; float: left; width: 20%; height: 10px; background-color: yellow}
+#green {float: left; width: 20%; height: 10px; background-color: green}
+#red {float: left; width: 20%; height: 10px; background-color: red}
+#blue {float: left; width: 20%; height: 10px; background-color: blue}
+#lightgreen {float: left; width: 20%; height: 10px; background-color: greenyellow}
+
+h3{font-size: 14pt; font-weight: bold}
+/* Content Area */
+
+#contentarea {clear: right; width: 100%; background-color: black}
+.logo{background: #3880AA; color: #FFF; height: 50px; font-size: 14pt; font-weight: bold; padding-top: 10px}
+.topo{background: #3C8DBC; color: #FFF; height: 50px; font-size: 16pt; padding-top: 10px; cursor: pointer}
+img{max-width: 100%}
+/* Left Menu */
+.bgMenu{background-color: #222d32; height: 90.6%; padding: 20px; padding-left: 30px; }
+nav{padding-top: 20px; }
+nav li{padding-top: 10px}
+nav a{color: #ADB3B5}
+nav a:hover{color: #FFF; text-decoration: none}
+/* Main Menu */
+#maincontent {float: left; }
