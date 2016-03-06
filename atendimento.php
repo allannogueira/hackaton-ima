@@ -1,27 +1,10 @@
-<html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-	}
-</style>
-<body  ng-app="MyApp">
+Ôªø<?php include("header.php"); ?>
+<div ng-app="MyApp">
 	<div ng-controller="PostsCtrl">
-		<div class="container">
 			<div class="jumbotron">
 				<form class="form-inline">
 					<div class="form-group">
-						<label for="nomeRegiao">Qual o n˙mero do atendimento: </label>
+						<label for="nomeRegiao">Qual o n√∫mero do atendimento: </label>
 						<input type="text" class="form-control"   ng-model="searchFilter"/>
 					</div>
 					<button ng-click="consultar()" class="btn btn-primary">Pesquisar</button>
@@ -34,13 +17,13 @@
 				<li class="list-group-item" ><label>Secretaria:</label> {{dado.secretaria}}</li>
 				<li class="list-group-item"><label>Bairro:</label> {{dado.nomeBairro}}</li>
 				<li class="list-group-item"><label>Assunto:</label> {{dado.descricaoAssunto}}</li>
-				<li class="list-group-item"><label>Ano SolicitaÁ„o:</label> {{dado.anoSolicitacao}}</li>
-				<li class="list-group-item"><label>Tipo SolicitaÁ„o:</label> {{dado.descricaoTipoSolicitacao}}</li>
+				<li class="list-group-item"><label>Ano Solicita√ß√£o:</label> {{dado.anoSolicitacao}}</li>
+				<li class="list-group-item"><label>Tipo Solicita√ß√£o:</label> {{dado.descricaoTipoSolicitacao}}</li>
 				<li class="list-group-item"><label>Status:</label> {{dado.descricaoStatus}}</li>
 				<li class="list-group-item"><label>Data Cadastro:</label> {{dado.dataCadastro}}</li>
-				<li class="list-group-item"><label>Data Previs„o:</label> {{dado.dataPrevisaoResposta}}</li>
+				<li class="list-group-item"><label>Data Previs√£o:</label> {{dado.dataPrevisaoResposta}}</li>
 				<li class="list-group-item"><label>Data Atendimento:</label> {{dado.dataAtendimento}}</li>
-				<li class="list-group-item"><label>Data Conclus„o:</label> {{dado.dataConclusao}}</li>
+				<li class="list-group-item"><label>Data Conclus√£o:</label> {{dado.dataConclusao}}</li>
 			</ul>
 			
 			
@@ -50,21 +33,23 @@
 				<li class="list-group-item" ><label>Secretaria:</label> {{dados.secretaria}}</li>
 				<li class="list-group-item"><label>Bairro:</label> {{dados.nomeBairro}}</li>
 				<li class="list-group-item"><label>Assunto:</label> {{dados.descricaoAssunto}}</li>
-				<li class="list-group-item"><label>Ano SolicitaÁ„o:</label> {{dados.anoSolicitacao}}</li>
-				<li class="list-group-item"><label>Tipo SolicitaÁ„o:</label> {{dados.descricaoTipoSolicitacao}}</li>
+				<li class="list-group-item"><label>Ano Solicita√ß√£o:</label> {{dados.anoSolicitacao}}</li>
+				<li class="list-group-item"><label>Tipo Solicita√ß√£o:</label> {{dados.descricaoTipoSolicitacao}}</li>
 				<li class="list-group-item"><label>Status:</label> {{dados.descricaoStatus}}</li>
 				<li class="list-group-item"><label>Data Cadastro:</label> {{dados.dataCadastro}}</li>
-				<li class="list-group-item"><label>Data Previs„o:</label> {{dados.dataPrevisaoResposta}}</li>
+				<li class="list-group-item"><label>Data Previs√£o:</label> {{dados.dataPrevisaoResposta}}</li>
 				<li class="list-group-item"><label>Data Atendimento:</label> {{dados.dataAtendimento}}</li>
-				<li class="list-group-item"><label>Data Conclus„o:</label> {{dados.dataConclusao}}</li>
+				<li class="list-group-item"><label>Data Conclus√£o:</label> {{dados.dataConclusao}}</li>
 			</ul>
 			
 			<button id="btnBuscarMais" class="btn btn-primary hide" ng-click="buscarMais()">BUSCAR MAIS</button>
-		</div>
+		
 	</div>
 	
-</body>
-</html>
+</div>
+<?php
+	include("footer.php");
+?>
 <script type='text/javascript'>
 	var app = angular.module("MyApp", []);
 	var offset = 0;
@@ -106,6 +91,3 @@
 		$scope.consultar();
 	});
 </script>
-
-
-<!-- atendimento.html#/param?id=7d1252cb58ef -->

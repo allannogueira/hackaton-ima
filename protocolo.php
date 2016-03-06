@@ -1,27 +1,10 @@
-<html>
-<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<!-- Latest compiled and minified CSS -->
-	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-</head>
-<style type="text/css">
-	*{
-		margin: 0;
-		padding: 0;
-	}
-</style>
-<body  ng-app="MyApp">
+<?php include("header.php"); ?>
+<div ng-app="MyApp">
 	<div ng-controller="PostsCtrl">
-		<div class="container">
 			<div class="jumbotron">
 				<form class="form-inline">
 					<div class="form-group">
-						<label for="nomeRegiao">Qual o n˙mero do atendimento: </label>
+						<label for="nomeRegiao">Qual o n√∫mero do atendimento: </label>
 						<input type="text" class="form-control"   ng-model="searchFilter"/>
 					</div>
 					<button ng-click="consultar()" class="btn btn-primary">Pesquisar</button>
@@ -29,7 +12,7 @@
 			</div>
 			
 			<ul ng-repeat="dado in dados  | filter: searchFilter" class="list-group listaTodos" id="id{{dado.id}}">
-				<li class="list-group-item active"><label>Nome da Regi„o:</label> {{dado.nomeRegiao}}  <span class="badge"> {{dado.id}} </span></li>
+				<li class="list-group-item active"><label>Nome da Regi√£o:</label> {{dado.nomeRegiao}}  <span class="badge"> {{dado.id}} </span></li>
 				<li class="list-group-item"><label>Nome do Bairro</label> {{dado.nomeBairro}}</li>
 				<li class="list-group-item"><label>Secretaria Expediente</label> {{dado.secretariaExpediente}}</li>
 				<li class="list-group-item"><label>Sigla Expediente</label> {{dado.siglaExpediente}}</li>
@@ -42,7 +25,7 @@
 			</ul>
 			
 			<ul  class="list-group umRegistro" id="id{{dados.id}}">
-				<li class="list-group-item active"><label>Nome da Regi„o:</label> {{dados.nomeRegiao}}  <span class="badge"> {{dados.id}} </span></li>
+				<li class="list-group-item active"><label>Nome da Regi√£o:</label> {{dados.nomeRegiao}}  <span class="badge"> {{dados.id}} </span></li>
 				<li class="list-group-item"><label>Nome do Bairro</label> {{dados.nomeBairro}}</li>
 				<li class="list-group-item"><label>Secretaria Expediente</label> {{dados.secretariaExpediente}}</li>
 				<li class="list-group-item"><label>Sigla Expediente</label> {{dados.siglaExpediente}}</li>
@@ -56,10 +39,8 @@
 			
 			<button id="btnBuscarMais" class="btn btn-primary hide" ng-click="buscarMais()">BUSCAR MAIS</button>
 		</div>
-	</div>
-	
-</body>
-</html>
+</div>
+
 <script type='text/javascript'>
 	var app = angular.module("MyApp", []);
 	var offset = 0;
@@ -92,6 +73,7 @@
 		}
 		
 		$scope.buscarMais = function(){
+		alert("ok");
 			if(offset >= 0){ 
 				limite += 10;
 				this.consultar();
@@ -101,3 +83,4 @@
 		$scope.consultar();
 	});
 </script>
+<?php include("footer.php"); ?>
